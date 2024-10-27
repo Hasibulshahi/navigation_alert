@@ -95,12 +95,27 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(20, 20, 40, 20),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(30, 15, 40, 20),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text(
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) => const MapPage()),
+                              );
+                            }, 
+                            child: const Text(
+                              'Register Now',
+                              style: TextStyle(
+                                color: Colors.grey
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 30,),
+                          const Text(
                             'Forget Password',
                             style: TextStyle(
                               color: Colors.grey
