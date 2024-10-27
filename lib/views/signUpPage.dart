@@ -52,7 +52,7 @@ class _SignUpState extends State<SignUp> {
                 height: 30,
               ),
               Container(
-                height: 500,
+                height: 600,
                 width: 325,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -65,7 +65,7 @@ class _SignUpState extends State<SignUp> {
                       height: 20,
                     ),
                     const Text(
-                      'Welcome',
+                      'Sign Up',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 35,
@@ -90,6 +90,30 @@ class _SignUpState extends State<SignUp> {
                       child: TextField(
                         style: TextStyle(color: Colors.black),
                         decoration: InputDecoration(
+                          labelText: 'Name',
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const SizedBox(
+                      width: 250,
+                      child: TextField(
+                        style: TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
+                          labelText: 'Phone Number',
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const SizedBox(
+                      width: 250,
+                      child: TextField(
+                        style: TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
                           labelText: 'Email Address',
                           suffixIcon: Icon(FontAwesomeIcons.envelope, size: 17),
                         ),
@@ -107,18 +131,6 @@ class _SignUpState extends State<SignUp> {
                           labelText: 'Password',
                           suffixIcon: Icon(FontAwesomeIcons.eyeSlash, size: 17),
                         ),
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(20, 20, 40, 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Forget Password',
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ],
                       ),
                     ),
                     const SizedBox(
@@ -151,7 +163,7 @@ class _SignUpState extends State<SignUp> {
                           child: const Padding(
                             padding: EdgeInsets.all(12.0),
                             child: Text(
-                              'Login',
+                              'Register',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
@@ -192,6 +204,9 @@ class _SignUpState extends State<SignUp> {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 80,
+              )
             ],
           ),
         ),

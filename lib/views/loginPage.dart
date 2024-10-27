@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:navigation_alert/views/mapPage.dart';
+import 'package:navigation_alert/views/signUpPage.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -34,9 +35,13 @@ class _LoginState extends State<Login> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 80,),
+              const SizedBox(
+                height: 80,
+              ),
               Image.asset('images/logo_map_white.png'),
-              const SizedBox(height: 15,),
+              const SizedBox(
+                height: 15,
+              ),
               const Text(
                 'Navigation Alert',
                 style: TextStyle(
@@ -44,7 +49,9 @@ class _LoginState extends State<Login> {
                   fontSize: 20,
                 ),
               ),
-              const SizedBox(height: 30,),
+              const SizedBox(
+                height: 30,
+              ),
               Container(
                 height: 500,
                 width: 325,
@@ -55,24 +62,30 @@ class _LoginState extends State<Login> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 20,),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     const Text(
                       'Welcome',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
-                      ),                      
+                      ),
                     ),
-                    const SizedBox(height: 10,),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     const Text(
                       'Please Login to Your Account',
                       style: TextStyle(
                         fontSize: 15,
                         color: Colors.grey,
-                      ),                      
+                      ),
                     ),
-                    const SizedBox(height: 30,),
+                    const SizedBox(
+                      height: 30,
+                    ),
                     const SizedBox(
                       width: 250,
                       child: TextField(
@@ -83,7 +96,9 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10,),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     const SizedBox(
                       width: 250,
                       child: TextField(
@@ -103,34 +118,34 @@ class _LoginState extends State<Login> {
                           TextButton(
                             onPressed: () {
                               Navigator.push(
-                                context, 
-                                MaterialPageRoute(builder: (context) => const MapPage()),
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SignUp()),
                               );
-                            }, 
+                            },
                             child: const Text(
                               'Register Now',
-                              style: TextStyle(
-                                color: Colors.grey
-                              ),
+                              style: TextStyle(color: Colors.grey),
                             ),
                           ),
                           const Spacer(),
                           const Text(
                             'Forget Password',
-                            style: TextStyle(
-                              color: Colors.grey
-                            ),
+                            style: TextStyle(color: Colors.grey),
                           ),
                         ],
                       ),
                     ),
-                    const SizedBox(height: 30,),
+                    const SizedBox(
+                      height: 30,
+                    ),
                     GestureDetector(
                       child: TextButton(
                         onPressed: () {
                           Navigator.push(
-                            context, 
-                            MaterialPageRoute(builder: (context) => const MapPage()),
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MapPage()),
                           );
                         },
                         child: Container(
@@ -151,32 +166,40 @@ class _LoginState extends State<Login> {
                           child: const Padding(
                             padding: EdgeInsets.all(12.0),
                             child: Text(
-                                'Login',
-                                style: TextStyle(
+                              'Login',
+                              style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
-                                  fontWeight: FontWeight.bold
-                                ),
-                              ),
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                    const SizedBox(height: 15,),
-                    const Text(
-                      'Or Login using Social Media',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontWeight: FontWeight.bold,
-                      )
+                    const SizedBox(
+                      height: 15,
                     ),
-                    const SizedBox(height: 20,),
+                    const Text('Or Login using Social Media',
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        )),
+                    const SizedBox(height: 20),
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Icon(FontAwesomeIcons.facebookF, color: Colors.blueAccent,),
-                        Icon(FontAwesomeIcons.twitter, color: Colors.blueAccent,),
-                        Icon(FontAwesomeIcons.instagram, color: Colors.blueAccent,),
+                        Icon(
+                          FontAwesomeIcons.facebookF,
+                          color: Colors.blueAccent,
+                        ),
+                        Icon(
+                          FontAwesomeIcons.twitter,
+                          color: Colors.blueAccent,
+                        ),
+                        Icon(
+                          FontAwesomeIcons.instagram,
+                          color: Colors.blueAccent,
+                        ),
                       ],
                     ),
                   ],
