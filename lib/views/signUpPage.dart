@@ -4,16 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:navigation_alert/views/mapPage.dart';
-import 'package:navigation_alert/views/signUpPage.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LoginState extends State<Login> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +76,7 @@ class _LoginState extends State<Login> {
                       height: 10,
                     ),
                     const Text(
-                      'Please Login to Your Account',
+                      'Please Sign up to have an account',
                       style: TextStyle(
                         fontSize: 15,
                         color: Colors.grey,
@@ -110,28 +109,12 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(30, 15, 40, 20),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(20, 20, 40, 20),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const SignUp()),
-                              );
-                            },
-                            child: const Text(
-                              'Register Now',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 30,
-                          ),
-                          const Text(
+                          Text(
                             'Forget Password',
                             style: TextStyle(color: Colors.grey),
                           ),
