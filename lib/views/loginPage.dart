@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'package:navigation_alert/views/mapPage.dart';
+
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -109,30 +111,38 @@ class _LoginState extends State<Login> {
                     ),
                     const SizedBox(height: 30,),
                     GestureDetector(
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: const LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color(0xFF1E3A8A), // Dark blue
-                              Color(0xFF2563EB), // Medium blue
-                              Color(0xFF60A5FA), // Light blue
-                            ],
-                          ),
-                        ),
-                        child: const Padding(
-                          padding: EdgeInsets.all(12.0),
-                          child: Text(
-                            'Login',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => const MapPage()),
+                          );
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          width: 250,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            gradient: const LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                Color(0xFF1E3A8A), // Dark blue
+                                Color(0xFF2563EB), // Medium blue
+                                Color(0xFF60A5FA), // Light blue
+                              ],
                             ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(12.0),
+                            child: Text(
+                                'Login',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
                           ),
                         ),
                       ),
