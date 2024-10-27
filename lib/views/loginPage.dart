@@ -114,7 +114,7 @@ class _LoginState extends State<Login> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 30,),
+                          const Spacer(),
                           const Text(
                             'Forget Password',
                             style: TextStyle(
